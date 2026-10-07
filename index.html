@@ -46,58 +46,69 @@
   <div class="head">
     <p class="eyebrow mono">週三 · 09:12 → 18:40</p>
     <h1 id="hero-title" class="display"><span class="ln">這一天，</span><span class="ln">你複製了 <em class="count" data-count>47</em> 次。</span></h1>
-    <p class="lede">系統剪貼簿只記得最後一筆。貼貼把每一筆留下來、標好類型，下次要用的時候，<span class="nb">打兩個字就找到。</span></p>
+    <p class="lede">系統剪貼簿只記得最後一筆。貼貼把每一筆留下來、標好類型，下次要用的時候，打兩個字就<span class="nb">找到。</span>全部只存在你的裝置和你自己的 iCloud，不需要帳號。</p>
     <div class="cta">
       <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">在 App Store 免費下載</a>
-      <span class="avail">iPhone・iPad<span class="sep"></span>Mac 版即將推出</span>
+      <span class="avail">iPhone、iPad 已上架<span class="sep"></span>Mac 版即將推出</span>
     </div>
     <p class="hint"><span class="key">⌘C</span>試試看：在這一頁複製任何一段字。它只會存在這個分頁裡。</p>
   </div>
 
   <div class="tiles" aria-label="一天裡複製過的東西">
     <article class="t link" data-t="1" style="--tint:var(--k-link)">
-      <div class="meta"><span class="time">09:12</span>Safari<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
+      <div class="meta">Safari<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
       <div class="c"><p class="ttl">App Intents 文件：讓系統接上你的動作</p><p class="url">developer.apple.com/documentation/appintents</p></div>
+      <div class="ft"><span>已抓到網頁標題</span><span class="time">09:12</span></div>
     </article>
     <article class="t color" data-t="2" style="--tint:var(--k-color)">
-      <div class="meta"><span class="time">09:40</span>Figma<span class="kind"><svg class="i"><use href="#i-color"/></svg>顏色</span></div>
+      <div class="meta">Figma<span class="kind"><svg class="i"><use href="#i-color"/></svg>顏色</span></div>
       <div class="c"><div class="sw" style="--sw:#FF7B4F"><span>#FF7B4F</span></div></div>
+      <div class="ft"><span>rgb(255, 123, 79)</span><span class="time">09:40</span></div>
     </article>
     <article class="t shot" data-t="4" style="--tint:var(--k-image)">
-      <div class="meta"><span class="time">11:26</span>截圖<span class="kind"><svg class="i"><use href="#i-image"/></svg>圖片</span></div>
-      <div class="c"><div class="phone" aria-hidden="true"><span class="bar" style="width:52%"></span><span class="bar" style="width:78%"></span>
-        <span class="tk"><b>台北 → 左營</b>10/10（五）08:12 發車<mark>0812 車次 7 車 12A</mark></span>
-        <span class="bar" style="width:66%"></span><span class="bar" style="width:38%"></span></div>
-        <p class="ocr">已辨識圖中文字，搜得到</p></div>
+      <div class="meta">截圖<span class="kind"><svg class="i"><use href="#i-image"/></svg>圖片</span></div>
+      <div class="c"><div class="ticket" aria-label="高鐵車票截圖：10 月 10 日 0812 車次，台北 08:12 到左營 09:45，7 車 12A">
+        <p class="tk-head"><b>高鐵車票</b><span>單程 · 標準車廂</span></p>
+        <p class="tk-route"><span><b>台北</b>08:12</span><span class="arr">→</span><span><b>左營</b>09:45</span></p>
+        <dl><div><dt>日期</dt><dd>10/10（五）</dd></div><div><dt>車次</dt><dd><mark>0812</mark></dd></div><div><dt>座位</dt><dd>7 車 12A</dd></div></dl>
+        <span class="qr" aria-hidden="true"></span>
+      </div></div>
+      <div class="ft"><span class="ocr">辨識到「0812」</span><span class="time">11:26</span></div>
     </article>
     <article class="t code" data-t="3" style="--tint:var(--k-code)">
-      <div class="meta"><span class="time">10:03</span>Xcode<span class="kind"><svg class="i"><use href="#i-code"/></svg>程式碼</span></div>
+      <div class="meta">Xcode<span class="kind"><svg class="i"><use href="#i-code"/></svg>程式碼</span></div>
       <div class="c"><pre><code><span class="cm">// 搜尋框打字時，不要每個字都查一次</span>
 <span class="kw">func</span> <span class="fn">debounce</span>(_ interval: TimeInterval,
               action: <span class="kw">@escaping</span> () -> Void) -> () -> Void {
     <span class="kw">var</span> task: Task&lt;Void, Never&gt;?
     <span class="kw">return</span> { task?.cancel(); task = Task { … } }
 }</code></pre></div>
+      <div class="ft"><span>213 字 · 6 行</span><span class="time">10:03</span></div>
     </article>
     <article class="t note" data-t="5" style="--tint:var(--k-text)">
-      <div class="meta"><span class="time">13:05</span>行事曆<span class="kind"><svg class="i"><use href="#i-text"/></svg>文字</span></div>
+      <div class="meta">行事曆<span class="kind"><svg class="i"><use href="#i-text"/></svg>文字</span></div>
       <div class="c"><p>週三 15:00 產品同步會議<br>地點：會議室 B<br>記得帶上一季的留存數據</p></div>
+      <div class="ft"><span>34 字 · 3 行</span><span class="time">13:05</span></div>
     </article>
     <article class="t mask" data-t="6" style="--tint:var(--k-text)">
-      <div class="meta"><span class="time">14:32</span>備忘錄<span class="kind"><svg class="i"><use href="#i-lock"/></svg>已遮罩</span></div>
+      <div class="meta">備忘錄<span class="kind"><svg class="i"><use href="#i-lock"/></svg>已遮罩</span></div>
       <div class="c"><span class="dots mono">••••••••</span><small>偵測到信用卡號<br>10 分鐘後自動刪除</small></div>
+      <div class="ft"><span>敏感內容</span><span class="time">14:32</span></div>
     </article>
     <article class="t mail" data-t="7" style="--tint:var(--k-email)">
-      <div class="meta"><span class="time">15:48</span>郵件<span class="kind"><svg class="i"><use href="#i-mail"/></svg>Email</span></div>
+      <div class="meta">郵件<span class="kind"><svg class="i"><use href="#i-mail"/></svg>Email</span></div>
       <div class="c"><p>lin.yating@studio-ko.tw</p></div>
+      <div class="ft"><span>23 字</span><span class="time">15:48</span></div>
     </article>
     <article class="t utm" data-t="8" style="--tint:var(--k-link)">
-      <div class="meta"><span class="time">17:55</span>LINE<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
+      <div class="meta">LINE<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
       <div class="c"><p class="url mono">youtu.be/q8Wz3xV0bLk?t=94<s>&amp;si=Hk2vT0aQ</s><s>&amp;utm_source=line</s></p><small>貼上前去掉追蹤參數，留下時間戳</small></div>
+      <div class="ft"><span>2 個追蹤參數</span><span class="time">17:55</span></div>
     </article>
     <article class="t file" data-t="9" style="--tint:var(--k-file)">
-      <div class="meta"><span class="time">18:40</span>Finder<span class="kind"><svg class="i"><use href="#i-file"/></svg>檔案</span></div>
+      <div class="meta">Finder<span class="kind"><svg class="i"><use href="#i-file"/></svg>檔案</span></div>
       <div class="c"><span class="doc" aria-hidden="true">PDF</span><span><b>報價單_v3.pdf</b><small>248 KB</small></span></div>
+      <div class="ft"><span>1 個檔案</span><span class="time">18:40</span></div>
     </article>
   </div>
 </section>
@@ -107,8 +118,8 @@
   <div class="sort-stage">
     <div class="sort-copy">
       <p class="eyebrow">自動分類</p>
-      <h2 id="sort-title" class="display">不用自己整理，<br>它自己會分好。</h2>
-      <p class="body">複製進來就分成八種：文字、富文字、連結、程式碼、顏色、Email、圖片、檔案。重複複製同一個東西不會變成兩筆，只會把舊的提到最前面。</p>
+      <h2 id="sort-title" class="display">它自己會分好。</h2>
+      <p class="body">不用自己整理。複製進來就分成八種：文字、富文字、連結、程式碼、顏色、Email、圖片、檔案。重複複製同一個東西不會變成兩筆，只會把舊的提到最前面。</p>
       <ul class="perks">
         <li style="--tint:var(--k-color)"><b>顏色</b>顯示色票</li>
         <li style="--tint:var(--k-link)"><b>連結</b>抓網頁標題</li>
@@ -134,17 +145,12 @@
 
 <!-- ───────────── 搜尋 ───────────── -->
 <section class="find" aria-labelledby="find-title">
-  <div class="wrap find-in">
-    <div class="find-copy">
+  <div class="wrap">
+    <header class="sec-head">
       <p class="eyebrow">搜尋</p>
-      <h2 id="find-title" class="display">找得到，<br>才算留下來。</h2>
-      <ol class="rules">
-        <li><span class="n mono">01</span><p><b>空白隔開就是多個關鍵字。</b>「widget kit」找得到「WidgetKit」。</p></li>
-        <li><span class="n mono">02</span><p><b>完全相同的排最前，</b>接著是開頭、詞首、中間符合；釘選、常用和最近用過的再往前一點。</p></li>
-        <li><span class="n mono">03</span><p><b>命中太少就比對縮寫。</b>「wdgt」也找得到「WidgetKit」。</p></li>
-        <li><span class="n mono">04</span><p><b>截圖裡的字也搜得到，</b>存進來的時候就已經在你的裝置上辨識好了。</p></li>
-      </ol>
-    </div>
+      <h2 id="find-title" class="display"><span class="nb">打 wdgt</span> <span class="nb">也找得到 WidgetKit。</span></h2>
+      <p class="body">打幾個字母就夠了。貼貼會猜你要的是哪一筆，把它排在最前面。</p>
+    </header>
     <div class="panel" role="search">
       <label class="q">
         <svg class="i"><use href="#i-search"/></svg>
@@ -155,25 +161,31 @@
       <ul class="results" id="results"></ul>
       <p class="try">換個字試試：<button type="button" data-q="widget kit">widget kit</button><button type="button" data-q="0812">0812</button><button type="button" data-q="會議">會議</button><button type="button" data-q="#ff">#ff</button></p>
     </div>
+    <ol class="rules">
+      <li><span class="n mono">01</span><p><b>空白隔開就是多個關鍵字。</b>「widget kit」找得到「WidgetKit」。</p></li>
+      <li><span class="n mono">02</span><p><b>完全相同的排最前，</b>接著是開頭、詞首、中間符合；釘選、常用和最近用過的再往前一點。</p></li>
+      <li><span class="n mono">03</span><p><b>命中太少就比對縮寫，</b>所以「wdgt」也找得到。</p></li>
+      <li><span class="n mono">04</span><p><b>截圖裡的字也搜得到，</b>存進來的時候就已經在你的裝置上辨識好了。</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- ───────────── 轉換 ───────────── -->
 <section class="shape" aria-labelledby="shape-title">
-  <div class="wrap shape-in">
-    <div class="shape-copy">
+  <div class="wrap">
+    <header class="sec-head">
       <p class="eyebrow">轉換後再貼</p>
-      <h2 id="shape-title" class="display">貼出去之前，<br>先改一下。</h2>
-      <p class="body">去空白、移除換行、轉大小寫、拿掉 Markdown、JSON 格式化、Base64、去除重複行、排序，也能把一串清單拆成好幾筆。原本那筆永遠不會被改。</p>
-      <div class="clean" aria-label="去掉追蹤參數的例子">
-        <p class="clean-lab"><svg class="i"><use href="#i-link"/></svg>去掉追蹤參數</p>
-        <p class="clean-url mono">https://youtu.be/q8Wz3xV0bLk?t=94<s>&amp;si=Hk2vT0aQ</s><s>&amp;utm_source=line</s></p>
-        <p class="clean-note"><code>t</code> 在 YouTube 是「從第幾秒開始播」，所以留著；同一個 <code>t</code> 在 X 是追蹤，就拿掉。每個網站有自己的規則。</p>
-      </div>
+      <h2 id="shape-title" class="display">貼出去之前先改一下。</h2>
+      <p class="body">原本那筆永遠不會被改，轉換只發生在貼出去的那一次。</p>
+    </header>
+    <div class="clean" aria-label="去掉追蹤參數的例子">
+      <p class="clean-lab"><svg class="i"><use href="#i-link"/></svg>去掉追蹤參數</p>
+      <p class="clean-url mono">https://youtu.be/q8Wz3xV0bLk?t=94<s>&amp;si=Hk2vT0aQ</s><s>&amp;utm_source=line</s></p>
+      <p class="clean-note"><code>t</code> 在 YouTube 是「從第幾秒開始播」，所以留著；同一個 <code>t</code> 在 X 是追蹤，就拿掉。每個網站有自己的規則。</p>
     </div>
-    <figure class="shot-ipad">
-      <img src="assets/screens/ipad-transform.webp" width="1300" height="1734" loading="lazy" alt="iPad 上的貼貼：選一筆程式碼，右側跳出轉換選單，有去除前後空白、移除換行、轉大小寫、URL 編碼、行排序、Base64 編碼，以及本機的 Apple Intelligence 摘要與翻譯。">
-    </figure>
+    <ul class="ops" aria-label="其他轉換">
+      <li>去除前後空白</li><li>移除換行</li><li>轉大小寫</li><li>移除 Markdown</li><li>URL 編碼／解碼</li><li>JSON 格式化／壓縮</li><li>Base64</li><li>去除重複行</li><li>行排序</li><li>拆成多筆</li><li>翻譯</li>
+    </ul>
   </div>
 </section>
 
@@ -181,7 +193,7 @@
 <section class="where" id="platforms" aria-labelledby="where-title">
   <div class="wrap">
     <p class="eyebrow">iPhone・iPad・Mac</p>
-    <h2 id="where-title" class="display">入口放在你手邊，<br>不必先切回貼貼。</h2>
+    <h2 id="where-title" class="display">不必先切回貼貼。</h2>
   </div>
 
   <div class="mac">
@@ -207,7 +219,7 @@
     </figure>
     <div class="ph-copy">
       <h3>iPhone 與 iPad</h3>
-      <p class="body">iOS 不讓背景的 App 偷看剪貼簿，所以貼貼把入口放在你本來就在用的地方。</p>
+      <p class="body">iOS 不讓背景的 App 偷看剪貼簿，所以貼貼把入口放在你本來就在用的地方。iPad 上是三欄，外接鍵盤也能用 ⌘F 搜尋、⌘1–9 直接複製。</p>
       <ul class="ways">
         <li><b>貼貼鍵盤</b><span>在任何輸入框叫出剪貼歷史，點一下就輸入。</span></li>
         <li><b>分享選單</b><span>任何 App 都能存進貼貼，順手選收藏集、加備註。</span></li>
@@ -216,8 +228,8 @@
         <li><b>控制中心</b><span>一按就把最新一筆放回剪貼簿。</span></li>
       </ul>
     </div>
-    <figure class="ph ph-2">
-      <img src="assets/screens/iphone-detail.webp" width="780" height="1695" loading="lazy" alt="iPhone 上一筆剪貼的詳細頁：可以複製、分享、編輯、翻譯，內容裡的日期被辨識出來，可以直接在行事曆查看。">
+    <figure class="ph ph-2 ipad">
+      <img src="assets/screens/ipad-transform.webp" width="1300" height="1734" loading="lazy" alt="iPad 上的貼貼：左側是類型與收藏集，中間是剪貼列表，右側選中一筆程式碼，跳出轉換選單，有去除前後空白、移除換行、轉大小寫、URL 編碼、行排序、Base64 編碼與本機的 Apple Intelligence 摘要和翻譯。">
     </figure>
   </div>
 </section>
@@ -251,12 +263,13 @@
 <section class="pricing" id="pricing" aria-labelledby="pricing-title">
   <div class="wrap">
     <p class="eyebrow">方案</p>
-    <h2 id="pricing-title" class="display">大部分都免費，<br>Pro 買一次就好。</h2>
+    <h2 id="pricing-title" class="display">Pro 只要買一次。</h2>
+    <p class="body">大部分功能都免費，包括所有隱私功能。</p>
     <div class="plans">
       <article class="plan">
         <h3>免費</h3>
         <p class="price"><span class="num">NT$0</span></p>
-        <p class="sub">不限筆數，所有隱私功能都在。</p>
+        <p class="sub">不設筆數上限，所有隱私功能都在。</p>
         <ul>
           <li>自動分類、去重、搜尋、圖片文字辨識</li>
           <li>釘選、收藏集、備註、可改標題</li>
@@ -265,6 +278,7 @@
           <li>自動遮罩、上鎖收藏集、錄影遮蔽</li>
           <li>區網直傳（不經任何伺服器）</li>
         </ul>
+        <a class="btn ghost" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">免費下載</a>
       </article>
       <article class="plan pro">
         <h3>貼貼 Pro <span class="tag">一次買斷</span></h3>
@@ -277,7 +291,7 @@
           <li><b>工作階段</b>：一段時間的剪貼整理成一份，匯出 Markdown</li>
           <li><b>比較兩筆</b>：逐行標出差異</li>
         </ul>
-        <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">在 App Store 下載</a>
+        <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">下載後在 App 內購買</a>
       </article>
     </div>
   </div>

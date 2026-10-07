@@ -231,6 +231,12 @@
   const pile = $('.pile');
   const chips = [];
   let sortTL = null;
+  const landing = [];
+  function tallyLanded() {
+    const n = Object.fromEntries(KINDS.map((k) => [k, 0]));
+    landing.forEach(({ el, tw }) => { if (tw && tw.progress() > 0.8) n[el.dataset.kind]++; });
+    $$('.col').forEach((col) => { const b = $('.n', col); const v = String(n[col.dataset.kind]); if (b.textContent !== v) b.textContent = v; });
+  }
   const countByKind = Object.fromEntries(KINDS.map((k) => [k, 0]));
   function chipFor(c, fresh) {
     const el = document.createElement('span');
@@ -262,7 +268,6 @@
     if (!board) return;
     clips.forEach((c) => chipFor(c));
     const L = layout(); sizeChips(L);
-    const nums = $$('.col .n');
     if (!G || !ST || reduce) {
       chips.forEach((el) => { const p = endPos(el, L); el.style.transform = `translate(${p.x}px,${p.y}px)`; });
       addEventListener('resize', () => { const L2 = layout(); sizeChips(L2); chips.forEach((el) => { const p = endPos(el, L2); el.style.transform = `translate(${p.x}px,${p.y}px)`; }); });
@@ -276,18 +281,17 @@
         onRefresh: () => sizeChips(layout()) },
     });
     sortTL.to({}, { duration: 1 }, 0);
+    sortTL.eventCallback('onUpdate', tallyLanded);
     chips.forEach((el, i) => {
       const k = KINDS.indexOf(el.dataset.kind);
       const at = 0.06 + k * 0.045 + (+el.dataset.slot) * 0.012;
       sortTL.fromTo(el, { x: () => startPos(el, i, layout()).x, y: () => startPos(el, i, layout()).y, rotation: () => startPos(el, i, layout()).rotation },
         { x: () => endPos(el, layout()).x, y: () => endPos(el, layout()).y, rotation: 0, duration: 0.42 }, Math.min(at, 0.55));
+      landing.push({ el, tw: sortTL.getTweensOf(el)[0] });
     });
-    sortTL.fromTo('.cols', { opacity: 0.25 }, { opacity: 1, duration: 0.2, ease: 'none' }, 0.72);
-    nums.forEach((n) => {
-      const kind = n.closest('.col').dataset.kind; const o = { r: 0 };
-      sortTL.to(o, { r: 1, duration: 0.22, ease: 'power1.out', onUpdate: () => { n.textContent = Math.round(o.r * countByKind[kind]); } }, 0.74);
-    });
+    sortTL.fromTo('.cols', { opacity: 0.4 }, { opacity: 1, duration: 0.25, ease: 'none' }, 0.1);
     sortTL.fromTo('.perks li', { opacity: 0, y: 10 }, { opacity: 1, y: 0, stagger: 0.04, duration: 0.12, ease: 'power2.out' }, 0.8);
+    tallyLanded();
   }
 
   // ───────── 在這一頁複製 ─────────
@@ -363,9 +367,10 @@
         const i = chips.length - 1;
         sortTL.fromTo(el, { x: () => startPos(el, i, layout()).x, y: () => startPos(el, i, layout()).y, rotation: () => startPos(el, i, layout()).rotation },
           { x: () => endPos(el, layout()).x, y: () => endPos(el, layout()).y, rotation: 0, duration: 0.3 }, 0.6);
+        landing.push({ el, tw: sortTL.getTweensOf(el)[0] });
         const p = sortTL.progress();
         sortTL.progress(0, true).progress(p, true);
-        if (n && p >= 0.96) n.textContent = countByKind[kind];
+        tallyLanded();
       } else {
         const p = endPos(el, L); el.style.transform = `translate(${p.x}px,${p.y}px)`;
         if (n) n.textContent = countByKind[kind];
@@ -400,27 +405,25 @@
   intro.from('.head .eyebrow', { opacity: 0, y: 8, duration: 0.5 }, 0)
     .from('h1 .ln', { opacity: 0, yPercent: 40, duration: 0.7, stagger: 0.08 }, 0.05)
     .from('.head .lede, .head .cta, .head .hint', { opacity: 0, y: 12, duration: 0.6, stagger: 0.06 }, 0.25)
-    .from(tiles, { opacity: 0, y: -22, scale: 1.03, rotation: () => (r2() - 0.5) * 7, duration: 0.62, ease: 'power3.out', stagger: 0.045 }, 0.12);
+    .from(tiles, { opacity: 0, y: -24, scale: 1.03, rotation: () => (r2() - 0.5) * 7, duration: 0.6, ease: 'power3.out', stagger: 0.07 }, 0.1);
   if (countEl) { const o = { v: 0 }; intro.to(o, { v: 47, duration: 0.9, ease: 'power2.out', onUpdate: () => { if (+countEl.textContent <= 47) countEl.textContent = Math.round(o.v); } }, 0.2); }
   ready();
 
-  const once = (trigger, fn, start = 'top 78%') => ST.create({ trigger, start, once: true, onEnter: fn });
+  const once = (trigger, fn, start = 'top 90%') => ST.create({ trigger, start, once: true, onEnter: fn });
 
   // 標題：從下方升起、字距從略鬆收緊
   $$('h2.display').forEach((h) => {
     if (h.closest('.sort')) return;
     G.set(h, { opacity: 0, y: 26, letterSpacing: '0.02em' });
-    once(h, () => G.to(h, { opacity: 1, y: 0, letterSpacing: '-0.01em', duration: 0.8, ease: 'expo.out' }), 'top 86%');
+    once(h, () => G.to(h, { opacity: 1, y: 0, letterSpacing: '-0.01em', duration: 0.8, ease: 'expo.out' }), 'top 94%');
   });
 
   // 搜尋：規則沿閱讀方向展開；面板帶重量落下；第一次看到時自己打 wdgt
   G.set('.rules li', { opacity: 0, x: -12 });
-  once('.rules', () => G.to('.rules li', { opacity: 1, x: 0, duration: 0.5, stagger: 0.07, ease: 'power3.out' }));
+  once('.rules', () => G.to('.rules li', { opacity: 1, x: 0, duration: 0.5, stagger: 0.07, ease: 'power3.out' }), 'top 97%');
   G.set('.panel', { opacity: 0, y: 36 });
-  once('.panel', () => {
-    G.to('.panel', { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.15)' });
-    if (input && !input.value && document.activeElement !== input) setTimeout(() => typeOut('wdgt'), 650);
-  }, 'top 72%');
+  once('.panel', () => G.to('.panel', { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.15)' }), 'top 95%');
+  once('.panel', () => { if (input && !input.value && document.activeElement !== input) setTimeout(() => typeOut('wdgt'), 300); }, 'top 60%');
 
   // 轉換：追蹤參數先被劃掉，再收起來
   const strikes = $$('.clean-url s');
@@ -442,9 +445,8 @@
     once(fig, () => {
       G.to(fig, { clipPath: 'inset(0% 0% 0% 0% round 28px)', duration: 0.9, delay, ease: 'expo.out', clearProps: 'clipPath' });
       G.to(img, { scale: 1, duration: 1.1, delay, ease: 'expo.out' });
-    }, 'top 85%');
+    }, 'top 95%');
   });
-  reveal('.shot-ipad');
   reveal('.ph');
 
   // Mac：視窗先到，面板像真的一樣從底部滑上來
@@ -454,12 +456,12 @@
     once('.mac-desk', () => {
       G.to('.mac-window', { y: 0, opacity: 1, duration: 0.8, ease: 'expo.out' });
       G.to('.mac-shelf', { yPercent: 0, duration: 0.75, delay: 0.35, ease: 'back.out(1.05)' });
-    }, 'top 70%');
+    }, 'top 80%');
     G.set('.keys li', { opacity: 0, y: 10 });
-    once('.keys', () => G.to('.keys li', { opacity: 1, y: 0, stagger: 0.06, duration: 0.45, ease: 'power3.out' }), 'top 90%');
+    once('.keys', () => G.to('.keys li', { opacity: 1, y: 0, stagger: 0.06, duration: 0.45, ease: 'power3.out' }), 'top 97%');
   }
   G.set('.ways li', { opacity: 0, x: -10 });
-  once('.ways', () => G.to('.ways li', { opacity: 1, x: 0, stagger: 0.06, duration: 0.45, ease: 'power3.out' }));
+  once('.ways', () => G.to('.ways li', { opacity: 1, x: 0, stagger: 0.06, duration: 0.45, ease: 'power3.out' }), 'top 95%');
 
   // 隱私：卡號一位一位變成圓點
   const rd = $('.rd-num');
@@ -482,15 +484,15 @@
     }, 'top 70%');
   }
   G.set('.facts li', { opacity: 0, y: 14 });
-  once('.facts', () => G.to('.facts li', { opacity: 1, y: 0, stagger: 0.06, duration: 0.55, ease: 'power3.out' }));
+  once('.facts', () => G.to('.facts li', { opacity: 1, y: 0, stagger: 0.06, duration: 0.55, ease: 'power3.out' }), 'top 95%');
 
   // 方案：帶重量落下，過沖一點點後穩住
   G.set('.plan', { opacity: 0, y: -28 });
-  once('.plans', () => G.to('.plan', { opacity: 1, y: 0, stagger: 0.07, duration: 0.7, ease: 'back.out(1.4)' }));
+  once('.plans', () => G.to('.plan', { opacity: 1, y: 0, stagger: 0.07, duration: 0.7, ease: 'back.out(1.4)' }), 'top 95%');
 
   // 結尾：icon 像貼紙一樣貼上去
   G.set('.end-icon', { opacity: 0, y: -26, rotation: -10, scale: 0.9 });
-  once('.end', () => G.to('.end-icon', { opacity: 1, y: 0, rotation: 0, scale: 1, duration: 0.7, ease: 'back.out(2.2)' }));
+  once('.end-icon', () => G.to('.end-icon', { opacity: 1, y: 0, rotation: 0, scale: 1, duration: 0.7, ease: 'back.out(2.2)' }), 'top 98%');
 
   addEventListener('load', () => ST.refresh());
 })();
