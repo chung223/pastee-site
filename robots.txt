@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chung223.github.io/pastee-site/sitemap.xml

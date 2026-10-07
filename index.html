@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>貼貼 Pastee｜iPhone、iPad、Mac 的剪貼簿歷史</title>
+<meta name="description" content="系統剪貼簿只記得最後一筆。貼貼把你複製過的每一樣東西留下來，自動分類、隨時搜尋得到，一點就能再貼一次。資料只在你的裝置和你自己的 iCloud 裡。">
+<meta name="theme-color" content="#F6F5F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)">
+<meta name="apple-itunes-app" content="app-id=6814187982">
+<link rel="canonical" href="https://chung223.github.io/pastee-site/">
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="貼貼 Pastee">
+<meta property="og:title" content="貼貼 Pastee｜複製過的東西，再也不會不見">
+<meta property="og:description" content="iPhone、iPad、Mac 的剪貼簿歷史。自動分類、搜尋得到、只存在你的裝置和你自己的 iCloud。">
+<meta property="og:url" content="https://chung223.github.io/pastee-site/">
+<meta property="og:image" content="https://chung223.github.io/pastee-site/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/pastee-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},2500)</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="./" aria-label="貼貼 Pastee 首頁"><img src="assets/icon-256.webp" width="30" height="30" alt="">貼貼</a>
+    <nav class="links" aria-label="主要">
+      <a href="#features">功能</a>
+      <a href="#privacy">隱私</a>
+      <a href="#pricing">方案</a>
+      <a href="support/">支援</a>
+    </nav>
+    <a class="get" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">下載</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────── 首屏：一天的剪貼 ───────────── -->
+<section class="day" aria-labelledby="hero-title">
+  <div class="head">
+    <p class="eyebrow mono">週三 · 09:12 → 18:40</p>
+    <h1 id="hero-title" class="display"><span class="ln">這一天，</span><span class="ln">你複製了 <em class="count" data-count>47</em> 次。</span></h1>
+    <p class="lede">系統剪貼簿只記得最後一筆。貼貼把每一筆留下來、標好類型，下次要用的時候，<span class="nb">打兩個字就找到。</span></p>
+    <div class="cta">
+      <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">在 App Store 免費下載</a>
+      <span class="avail">iPhone・iPad<span class="sep"></span>Mac 版即將推出</span>
+    </div>
+    <p class="hint"><span class="key">⌘C</span>試試看：在這一頁複製任何一段字。它只會存在這個分頁裡。</p>
+  </div>
+
+  <div class="tiles" aria-label="一天裡複製過的東西">
+    <article class="t link" data-t="1" style="--tint:var(--k-link)">
+      <div class="meta"><span class="time">09:12</span>Safari<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
+      <div class="c"><p class="ttl">App Intents 文件：讓系統接上你的動作</p><p class="url">developer.apple.com/documentation/appintents</p></div>
+    </article>
+    <article class="t color" data-t="2" style="--tint:var(--k-color)">
+      <div class="meta"><span class="time">09:40</span>Figma<span class="kind"><svg class="i"><use href="#i-color"/></svg>顏色</span></div>
+      <div class="c"><div class="sw" style="--sw:#FF7B4F"><span>#FF7B4F</span></div></div>
+    </article>
+    <article class="t shot" data-t="4" style="--tint:var(--k-image)">
+      <div class="meta"><span class="time">11:26</span>截圖<span class="kind"><svg class="i"><use href="#i-image"/></svg>圖片</span></div>
+      <div class="c"><div class="phone" aria-hidden="true"><span class="bar" style="width:52%"></span><span class="bar" style="width:78%"></span>
+        <span class="tk"><b>台北 → 左營</b>10/10（五）08:12 發車<mark>0812 車次 7 車 12A</mark></span>
+        <span class="bar" style="width:66%"></span><span class="bar" style="width:38%"></span></div>
+        <p class="ocr">已辨識圖中文字，搜得到</p></div>
+    </article>
+    <article class="t code" data-t="3" style="--tint:var(--k-code)">
+      <div class="meta"><span class="time">10:03</span>Xcode<span class="kind"><svg class="i"><use href="#i-code"/></svg>程式碼</span></div>
+      <div class="c"><pre><code><span class="cm">// 搜尋框打字時，不要每個字都查一次</span>
+<span class="kw">func</span> <span class="fn">debounce</span>(_ interval: TimeInterval,
+              action: <span class="kw">@escaping</span> () -> Void) -> () -> Void {
+    <span class="kw">var</span> task: Task&lt;Void, Never&gt;?
+    <span class="kw">return</span> { task?.cancel(); task = Task { … } }
+}</code></pre></div>
+    </article>
+    <article class="t note" data-t="5" style="--tint:var(--k-text)">
+      <div class="meta"><span class="time">13:05</span>行事曆<span class="kind"><svg class="i"><use href="#i-text"/></svg>文字</span></div>
+      <div class="c"><p>週三 15:00 產品同步會議<br>地點：會議室 B<br>記得帶上一季的留存數據</p></div>
+    </article>
+    <article class="t mask" data-t="6" style="--tint:var(--k-text)">
+      <div class="meta"><span class="time">14:32</span>備忘錄<span class="kind"><svg class="i"><use href="#i-lock"/></svg>已遮罩</span></div>
+      <div class="c"><span class="dots mono">••••••••</span><small>偵測到信用卡號<br>10 分鐘後自動刪除</small></div>
+    </article>
+    <article class="t mail" data-t="7" style="--tint:var(--k-email)">
+      <div class="meta"><span class="time">15:48</span>郵件<span class="kind"><svg class="i"><use href="#i-mail"/></svg>Email</span></div>
+      <div class="c"><p>lin.yating@studio-ko.tw</p></div>
+    </article>
+    <article class="t utm" data-t="8" style="--tint:var(--k-link)">
+      <div class="meta"><span class="time">17:55</span>LINE<span class="kind"><svg class="i"><use href="#i-link"/></svg>連結</span></div>
+      <div class="c"><p class="url mono">youtu.be/q8Wz3xV0bLk?t=94<s>&amp;si=Hk2vT0aQ</s><s>&amp;utm_source=line</s></p><small>貼上前去掉追蹤參數，留下時間戳</small></div>
+    </article>
+    <article class="t file" data-t="9" style="--tint:var(--k-file)">
+      <div class="meta"><span class="time">18:40</span>Finder<span class="kind"><svg class="i"><use href="#i-file"/></svg>檔案</span></div>
+      <div class="c"><span class="doc" aria-hidden="true">PDF</span><span><b>報價單_v3.pdf</b><small>248 KB</small></span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────── 自動分類（滑動驅動）───────────── -->
+<section class="sort" id="features" aria-labelledby="sort-title">
+  <div class="sort-stage">
+    <div class="sort-copy">
+      <p class="eyebrow">自動分類</p>
+      <h2 id="sort-title" class="display">不用自己整理，<br>它自己會分好。</h2>
+      <p class="body">複製進來就分成八種：文字、富文字、連結、程式碼、顏色、Email、圖片、檔案。重複複製同一個東西不會變成兩筆，只會把舊的提到最前面。</p>
+      <ul class="perks">
+        <li style="--tint:var(--k-color)"><b>顏色</b>顯示色票</li>
+        <li style="--tint:var(--k-link)"><b>連結</b>抓網頁標題</li>
+        <li style="--tint:var(--k-image)"><b>截圖</b>辨識裡面的字</li>
+        <li style="--tint:var(--k-rich)"><b>富文字</b>保留格式</li>
+      </ul>
+    </div>
+    <div class="board" aria-label="週三的剪貼，依類型分組">
+      <div class="pile" aria-hidden="true"></div>
+      <div class="cols">
+        <div class="col" data-kind="text" style="--tint:var(--k-text);--n:14"><span class="lab">文字</span><b class="n">14</b></div>
+        <div class="col" data-kind="link" style="--tint:var(--k-link);--n:9"><span class="lab">連結</span><b class="n">9</b></div>
+        <div class="col" data-kind="code" style="--tint:var(--k-code);--n:7"><span class="lab">程式碼</span><b class="n">7</b></div>
+        <div class="col" data-kind="image" style="--tint:var(--k-image);--n:6"><span class="lab">圖片</span><b class="n">6</b></div>
+        <div class="col" data-kind="color" style="--tint:var(--k-color);--n:4"><span class="lab">顏色</span><b class="n">4</b></div>
+        <div class="col" data-kind="email" style="--tint:var(--k-email);--n:3"><span class="lab">Email</span><b class="n">3</b></div>
+        <div class="col" data-kind="file" style="--tint:var(--k-file);--n:2"><span class="lab">檔案</span><b class="n">2</b></div>
+        <div class="col" data-kind="rich" style="--tint:var(--k-rich);--n:2"><span class="lab">富文字</span><b class="n">2</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 搜尋 ───────────── -->
+<section class="find" aria-labelledby="find-title">
+  <div class="wrap find-in">
+    <div class="find-copy">
+      <p class="eyebrow">搜尋</p>
+      <h2 id="find-title" class="display">找得到，<br>才算留下來。</h2>
+      <ol class="rules">
+        <li><span class="n mono">01</span><p><b>空白隔開就是多個關鍵字。</b>「widget kit」找得到「WidgetKit」。</p></li>
+        <li><span class="n mono">02</span><p><b>完全相同的排最前，</b>接著是開頭、詞首、中間符合；釘選、常用和最近用過的再往前一點。</p></li>
+        <li><span class="n mono">03</span><p><b>命中太少就比對縮寫。</b>「wdgt」也找得到「WidgetKit」。</p></li>
+        <li><span class="n mono">04</span><p><b>截圖裡的字也搜得到，</b>存進來的時候就已經在你的裝置上辨識好了。</p></li>
+      </ol>
+    </div>
+    <div class="panel" role="search">
+      <label class="q">
+        <svg class="i"><use href="#i-search"/></svg>
+        <span class="sr">搜尋週三的剪貼</span>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="搜尋週三的 47 筆剪貼…">
+        <span class="hits mono" aria-live="polite"></span>
+      </label>
+      <ul class="results" id="results"></ul>
+      <p class="try">換個字試試：<button type="button" data-q="widget kit">widget kit</button><button type="button" data-q="0812">0812</button><button type="button" data-q="會議">會議</button><button type="button" data-q="#ff">#ff</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 轉換 ───────────── -->
+<section class="shape" aria-labelledby="shape-title">
+  <div class="wrap shape-in">
+    <div class="shape-copy">
+      <p class="eyebrow">轉換後再貼</p>
+      <h2 id="shape-title" class="display">貼出去之前，<br>先改一下。</h2>
+      <p class="body">去空白、移除換行、轉大小寫、拿掉 Markdown、JSON 格式化、Base64、去除重複行、排序，也能把一串清單拆成好幾筆。原本那筆永遠不會被改。</p>
+      <div class="clean" aria-label="去掉追蹤參數的例子">
+        <p class="clean-lab"><svg class="i"><use href="#i-link"/></svg>去掉追蹤參數</p>
+        <p class="clean-url mono">https://youtu.be/q8Wz3xV0bLk?t=94<s>&amp;si=Hk2vT0aQ</s><s>&amp;utm_source=line</s></p>
+        <p class="clean-note"><code>t</code> 在 YouTube 是「從第幾秒開始播」，所以留著；同一個 <code>t</code> 在 X 是追蹤，就拿掉。每個網站有自己的規則。</p>
+      </div>
+    </div>
+    <figure class="shot-ipad">
+      <img src="assets/screens/ipad-transform.webp" width="1300" height="1734" loading="lazy" alt="iPad 上的貼貼：選一筆程式碼，右側跳出轉換選單，有去除前後空白、移除換行、轉大小寫、URL 編碼、行排序、Base64 編碼，以及本機的 Apple Intelligence 摘要與翻譯。">
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── 平台 ───────────── -->
+<section class="where" id="platforms" aria-labelledby="where-title">
+  <div class="wrap">
+    <p class="eyebrow">iPhone・iPad・Mac</p>
+    <h2 id="where-title" class="display">入口放在你手邊，<br>不必先切回貼貼。</h2>
+  </div>
+
+  <div class="mac">
+    <div class="wrap mac-head">
+      <h3>Mac <span class="soon">即將推出</span></h3>
+      <p>按 <span class="key">⇧⌘V</span>，貼貼從畫面底部浮上來，不搶走你正在用的 App。選好就貼進去，貼完就消失。</p>
+    </div>
+    <div class="mac-desk">
+      <img class="mac-window" src="assets/screens/mac-history.webp" width="1800" height="1296" loading="lazy" alt="Mac 上的貼貼歷史視窗：左側是類型與收藏集，中間是剪貼列表，右側是選中那筆程式碼的詳細內容與貼上、拆成多筆、比較等動作。">
+      <img class="mac-shelf" src="assets/screens/mac-shelf.webp" width="2000" height="460" loading="lazy" alt="Mac 上從畫面底部浮起的貼貼面板：一排橫向卡片，每張標著來源 App 與 ⌘1 到 ⌘6 的快速貼上鍵。">
+    </div>
+    <ul class="wrap keys">
+      <li><span class="key">⌘1–9</span><span>不必選，直接貼第幾筆</span></li>
+      <li><span class="key">⇧⌘C</span><span>依序貼上：每按一次 ⌘V 貼出下一筆</span></li>
+      <li><span class="key">;sig</span><span>打出關鍵字，自動換成整段內容</span></li>
+      <li><span class="key">⇧↩</span><span>貼成純文字，貼進終端機也不帶格式</span></li>
+    </ul>
+  </div>
+
+  <div class="wrap phones">
+    <figure class="ph">
+      <img src="assets/screens/iphone-home.webp" width="780" height="1695" loading="lazy" alt="iPhone 上的貼貼首頁：今天複製過的連結、會議資訊、程式碼、色票與 Email，每一筆都標示來源 App 與時間。">
+    </figure>
+    <div class="ph-copy">
+      <h3>iPhone 與 iPad</h3>
+      <p class="body">iOS 不讓背景的 App 偷看剪貼簿，所以貼貼把入口放在你本來就在用的地方。</p>
+      <ul class="ways">
+        <li><b>貼貼鍵盤</b><span>在任何輸入框叫出剪貼歷史，點一下就輸入。</span></li>
+        <li><b>分享選單</b><span>任何 App 都能存進貼貼，順手選收藏集、加備註。</span></li>
+        <li><b>小工具</b><span>主畫面、鎖定畫面與待機，點一下就複製。</span></li>
+        <li><b>動作按鈕與捷徑</b><span>不離開正在用的 App，就把剪貼簿存下來。</span></li>
+        <li><b>控制中心</b><span>一按就把最新一筆放回剪貼簿。</span></li>
+      </ul>
+    </div>
+    <figure class="ph ph-2">
+      <img src="assets/screens/iphone-detail.webp" width="780" height="1695" loading="lazy" alt="iPhone 上一筆剪貼的詳細頁：可以複製、分享、編輯、翻譯，內容裡的日期被辨識出來，可以直接在行事曆查看。">
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── 隱私 ───────────── -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap privacy-in">
+    <div class="pv-copy">
+      <p class="eyebrow">隱私</p>
+      <h2 id="privacy-title" class="display">隱私是預設值，<br>不是選項。</h2>
+      <p class="body">貼貼沒有帳號、沒有登入、沒有分析工具，也沒有第三方 SDK。開發者沒有伺服器，收不到你的任何資料。</p>
+      <div class="redact" aria-label="信用卡號被自動遮罩的示範">
+        <p class="rd-meta mono">14:32 · 備忘錄</p>
+        <p class="rd-num mono" aria-hidden="true"><span class="g">4000 1234 5678 9010</span><span class="m">••••••••</span></p>
+        <p class="rd-note">偵測到信用卡號，畫面上只剩圓點。貼上時仍是原本的號碼；可以設定幾分鐘後自動刪除。</p>
+      </div>
+    </div>
+    <ul class="facts">
+      <li><b>自動遮罩</b><span>信用卡號、API 金鑰、私鑰、JWT 一進來就遮起來。</span></li>
+      <li><b>密碼不記錄</b><span>密碼管理員複製的內容預設不存，也遵守系統的「機密」與「暫存」標記。</span></li>
+      <li><b>上鎖收藏集</b><span>裡面的內容不出現在任何列表，要 Face ID 或 Touch ID 才能看。</span></li>
+      <li><b>錄影時遮蔽</b><span>錄螢幕或分享畫面時，貼貼的內容自動蓋起來。</span></li>
+      <li><b>同步走你的 iCloud</b><span>文字以 CloudKit 端對端加密欄位儲存，開發者和 Apple 都讀不到。</span></li>
+      <li><b>只有三條路會出門</b><span>iCloud 同步、抓連結標題、區網直傳（預設關閉）。每一條都有開關，除此之外沒有任何網路請求。</span></li>
+    </ul>
+  </div>
+  <p class="wrap pv-link"><a href="https://chung223.github.io/pastee-privacy/">閱讀完整的隱私政策 →</a></p>
+</section>
+
+<!-- ───────────── 方案 ───────────── -->
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <p class="eyebrow">方案</p>
+    <h2 id="pricing-title" class="display">大部分都免費，<br>Pro 買一次就好。</h2>
+    <div class="plans">
+      <article class="plan">
+        <h3>免費</h3>
+        <p class="price"><span class="num">NT$0</span></p>
+        <p class="sub">不限筆數，所有隱私功能都在。</p>
+        <ul>
+          <li>自動分類、去重、搜尋、圖片文字辨識</li>
+          <li>釘選、收藏集、備註、可改標題</li>
+          <li>轉換後再貼、拆成多筆、QR 碼</li>
+          <li>貼貼鍵盤、分享選單、小工具、捷徑</li>
+          <li>自動遮罩、上鎖收藏集、錄影遮蔽</li>
+          <li>區網直傳（不經任何伺服器）</li>
+        </ul>
+      </article>
+      <article class="plan pro">
+        <h3>貼貼 Pro <span class="tag">一次買斷</span></h3>
+        <p class="price"><span class="num">NT$290</span><span class="once">不是訂閱</span></p>
+        <p class="sub">免費版的全部，再加上：</p>
+        <ul>
+          <li><b>iCloud 同步</b>，裝置之間即時同步，端對端加密</li>
+          <li><b>自己寫片段</b>：罐頭訊息、{date} 動態內容、填空範本</li>
+          <li><b>展開關鍵字</b>：打 ;sig 就換成整段內容</li>
+          <li><b>工作階段</b>：一段時間的剪貼整理成一份，匯出 Markdown</li>
+          <li><b>比較兩筆</b>：逐行標出差異</li>
+        </ul>
+        <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">在 App Store 下載</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 常見問題 ───────────── -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-in">
+    <h2 id="faq-title" class="display">常見問題</h2>
+    <div class="qa">
+      <details>
+        <summary>iPhone 上為什麼不會自己一直記錄？</summary>
+        <p>iOS 不讓在背景的 App 讀剪貼簿。回到貼貼時，它會偵測到新內容，顯示系統的「貼上」按鈕，不會跳權限提示；也可以改用貼貼鍵盤、分享選單、捷徑或動作按鈕，不必離開正在用的 App。</p>
+      </details>
+      <details>
+        <summary>貼貼鍵盤為什麼要開「允許完整取用」？</summary>
+        <p>鍵盤要讀到你存在貼貼裡的剪貼，才需要這個權限。貼貼鍵盤不連網路，也不會記錄你打的字。</p>
+      </details>
+      <details>
+        <summary>貼貼 Pro 換手機之後還在嗎？</summary>
+        <p>在。Pro 是一次買斷，跟著你的 Apple 帳號走。在新裝置打開設定裡的貼貼 Pro，按「恢復購買」就好。就算沒有 Pro，你已經存下的片段和剪貼也永遠讀得到，只是不能再建立新的片段、不能開始同步。</p>
+      </details>
+      <details>
+        <summary>不想用 iCloud，可以在兩台裝置之間傳嗎？</summary>
+        <p>可以用區網直傳：兩台裝置在同一個 Wi-Fi、輸入相同的配對碼，就會直接互傳，不經過任何伺服器，內容端對端加密。這個功能預設關閉，也不需要 Pro。</p>
+      </details>
+      <details>
+        <summary>需要什麼系統版本？</summary>
+        <p>iPhone 需要 iOS 26、iPad 需要 iPadOS 26，Mac 版需要 macOS 26。</p>
+      </details>
+    </div>
+    <p class="more"><a href="support/">更多問題與聯絡方式 →</a></p>
+  </div>
+</section>
+
+<section class="end" aria-labelledby="end-title">
+  <div class="wrap end-in">
+    <img src="assets/icon-256.webp" width="112" height="112" alt="" class="end-icon">
+    <h2 id="end-title" class="display">下次要用的時候，<br>它還在。</h2>
+    <a class="btn" href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">在 App Store 免費下載</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="brand"><img src="assets/icon-256.webp" width="22" height="22" alt="">貼貼 Pastee</span>
+    <nav aria-label="頁尾">
+      <a href="https://chung223.github.io/pastee-privacy/">隱私政策</a>
+      <a href="support/">支援</a>
+      <a href="https://apps.apple.com/tw/app/%E8%B2%BC%E8%B2%BC-pastee/id6814187982">App Store</a>
+    </nav>
+    <small>© 2026 貼貼 Pastee</small>
+  </div>
+</footer>
+
+<!-- 在這一頁複製時的提示 -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <span class="tk-kind"><svg class="i"><use href="#i-text"/></svg></span>
+  <span class="tk-body"><b class="tk-title">已存進貼貼</b><span class="tk-prev"></span></span>
+  <span class="tk-n mono"></span>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-link" viewBox="0 0 16 16"><path d="M6.6 9.4a2.7 2.7 0 0 0 3.8 0l2.2-2.2a2.7 2.7 0 0 0-3.8-3.8l-.8.8"/><path d="M9.4 6.6a2.7 2.7 0 0 0-3.8 0L3.4 8.8a2.7 2.7 0 0 0 3.8 3.8l.8-.8"/></symbol>
+  <symbol id="i-text" viewBox="0 0 16 16"><path d="M3 4h10M3 8h10M3 12h6"/></symbol>
+  <symbol id="i-rich" viewBox="0 0 16 16"><path d="M3 12.5 6.5 3.5 10 12.5M4.3 9.5h4.4M11 8.5h3M11 12.5h3"/></symbol>
+  <symbol id="i-code" viewBox="0 0 16 16"><path d="M5.5 4.5 2 8l3.5 3.5M10.5 4.5 14 8l-3.5 3.5"/></symbol>
+  <symbol id="i-color" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><circle cx="6" cy="6.6" r=".6"/><circle cx="9.6" cy="6" r=".6"/><circle cx="10.6" cy="9" r=".6"/></symbol>
+  <symbol id="i-image" viewBox="0 0 16 16"><rect x="2.5" y="3" width="11" height="10" rx="2"/><path d="m3 11 3.2-3 2.6 2.4L10.6 9l2.9 2.6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 16 16"><rect x="2.5" y="3.5" width="11" height="9" rx="1.8"/><path d="m3 4.5 5 4 5-4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M9 2.5v3h3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1.6"/><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></symbol>
+</svg>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
