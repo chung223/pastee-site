@@ -404,7 +404,9 @@ html:not(.js) .col::before{content:"";position:absolute;left:0;right:0;bottom:ca
 .qa details > p + ul.dots{margin-top:-12px}
 .contact{margin-top:96px;padding:40px;border-radius:var(--r-panel);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);scroll-margin-top:88px}
 .contact h2.display{margin-top:0;font-size:clamp(26px,3vw,36px)}
-.contact .btn{margin-top:26px}
+.contact-acts{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.contact .mail{color:var(--accent-text);font-weight:600;text-decoration:none;white-space:nowrap}
+.contact .mail:hover{text-decoration:underline}
 .fine{margin-top:18px;font-size:14px;color:var(--text3)}
 .fine a{color:var(--accent-text)}
 .lost{min-height:calc(100svh - 64px - 90px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px var(--gutter)}
