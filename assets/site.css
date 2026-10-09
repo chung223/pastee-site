@@ -221,7 +221,6 @@ html:not(.js) .col::before{content:"";position:absolute;left:0;right:0;bottom:ca
 .mac{margin-top:56px}
 .mac-head{display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
 .mac-head h3,.ph-copy h3{font:700 28px/1.3 var(--display)}
-.soon{display:inline-flex;vertical-align:middle;margin-left:8px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-text);font:600 13px var(--sans);letter-spacing:.02em}
 .mac-head p{max-width:34em;font-size:16px;line-height:1.75;color:var(--text2)}
 .mac-desk{position:relative;margin:36px auto 0;max-width:1440px;padding:56px var(--gutter) 0;overflow:hidden;
   background:linear-gradient(160deg,#FFD9C8 0%,#FF9C78 42%,#E8603F 100%)}
